@@ -1,7 +1,7 @@
 const city = 'medellin';
 const API_KEY = 'c982d29f34b457c7256dfdf78eff3288';
 
-fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
 .then(function (response) {
     console.log(response);
     return response.json();
