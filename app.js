@@ -23,7 +23,10 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityTyped}&appid=${AP
       const $country = document.getElementById("country");
       $country.innerHTML = data.sys.country;
       const $temp = document.getElementById("temp");
-      $temp.innerHTML = data.main.temp;
+      let x1 = data.main.temp - 273.15;
+      let x2 = x1.toFixed(0);
+      $temp.innerHTML = x2;
+    //   $temp.innerHTML.toFixed(0);
       const $description = document.getElementById("description");
       $description.innerHTML = data.weather[0].description;
 
