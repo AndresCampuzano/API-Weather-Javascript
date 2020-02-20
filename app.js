@@ -1,11 +1,14 @@
-const cityTyped = prompt("Search city");
+// const cityTyped = prompt("Search city");
 // const justForDevelopmentCity= 'Copacabana'
-const city = "medellin";
 const API_KEY = "c982d29f34b457c7256dfdf78eff3288";
 const temperatureUnit = "metric";
 
+//Getting user input value to use in Search Bar
+function makeItWorks(){
+  var inputVal = document.getElementById("userInput").value;
+  // Selecting the input element and get its value 
 fetch(`https://api.openweathermap.org/data/2.5/
-weather?q=${cityTyped}
+weather?q=${inputVal}
 &appid=${API_KEY}
 &units=${temperatureUnit}`)
   .then(function(response) {
@@ -33,7 +36,7 @@ weather?q=${cityTyped}
         <p class="card__item--unit">°C</p>
     </div>
     <div class="sectionTree">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${data.weather[0].icon}.svg" alt="">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${data.weather[0].icon}.svg" alt="${data.weather[0].description} image">
         <p class="card__item--description">${data.weather[0].description}</p>
     </div>
 </div>
@@ -51,3 +54,6 @@ weather?q=${cityTyped}
     var template = "<h1>City not found, try Medellin</h1>";
     renderError(template, "card");
   });
+
+  // return inputVal;
+}
