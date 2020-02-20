@@ -1,11 +1,11 @@
-// const cityTyped = prompt("Search city");
-const justForDevelopmentCity= 'Andorra'
+const cityTyped = prompt("Search city");
+// const justForDevelopmentCity= 'Copacabana'
 const city = "medellin";
 const API_KEY = "c982d29f34b457c7256dfdf78eff3288";
 const temperatureUnit = "metric";
 
 fetch(`https://api.openweathermap.org/data/2.5/
-weather?q=${justForDevelopmentCity}
+weather?q=${cityTyped}
 &appid=${API_KEY}
 &units=${temperatureUnit}`)
   .then(function(response) {
@@ -23,13 +23,22 @@ weather?q=${justForDevelopmentCity}
       node.innerHTML = template;
     };
     var template = `
-      <h1>The weather in ${data.name}, 
-      ${data.sys.country}, 
-      is ${temperatureFixed} °C, 
-      ${data.weather[0].description}
-      </h1>
+    <div class="card__item">
+    <div class="sectionOne">
+        <h2 class="card__item--title">${data.name}</h2>
+        <p class="card__item--country"> ${data.sys.country}</p>
+    </div>
+    <div class="sectionTwo">
+        <p class="card__item--number">${temperatureFixed}</p>
+        <p class="card__item--unit">°C</p>
+    </div>
+    <div class="sectionTree">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${data.weather[0].icon}.svg" alt="">
+        <p class="card__item--description">${data.weather[0].description}</p>
+    </div>
+</div>
       `;
-    render(template, "main");
+    render(template, "card");
   })
   .catch(function() {
     console.log("algo falló");
@@ -40,5 +49,5 @@ weather?q=${justForDevelopmentCity}
     };
 
     var template = "<h1>City not found, try Medellin</h1>";
-    renderError(template, "main");
+    renderError(template, "card");
   });

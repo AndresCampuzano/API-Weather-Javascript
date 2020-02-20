@@ -35,6 +35,10 @@ body {
   margin-left: 10px;
   font-weight: bold;
   cursor: pointer;
+  outline: none;
+}
+.container .search-bar button:hover {
+  background-color: #cf1938;
 }
 .container .card .card__item {
   background-color: #ffffff;
