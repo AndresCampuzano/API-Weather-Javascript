@@ -14,7 +14,9 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityTyped}&appid=${AP
       let temperatureCelsius = x1.toFixed(0);
 
       // Rendering weather using JS.
-      var render = function (template, node) {
+      var render = function (template, idHTML) {
+        var node = document.getElementById(idHTML);
+        if (!node) return; // Checking that the node exists
         node.innerHTML = template;
       };
       var template = `
@@ -24,7 +26,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityTyped}&appid=${AP
       ${data.weather[0].description}
       </h1>
       `;
-      render(template, document.getElementById('main'));
+      render(template, 'main');
 
   })
   .catch(function () {
