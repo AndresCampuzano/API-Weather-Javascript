@@ -51,7 +51,7 @@ weather?q=${inputVal}
       node.innerHTML = template;
     };
 
-    var template = "<h1>City not found, try Medellin</h1>";
+    var template = "<h1>City not found ⛅, try Medellin</h1>";
     renderError(template, "card");
   });
 
