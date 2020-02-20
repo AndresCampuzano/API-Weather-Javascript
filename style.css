@@ -1,0 +1,80 @@
+body {
+  background-color: #0a1f44;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 1024px;
+}
+.container .title {
+  font-size: 25px;
+}
+.container .search-bar {
+  margin-bottom: 50px;
+}
+.container .search-bar input {
+  background: none;
+  font-size: 2em;
+  border: none;
+  border-bottom: 1px solid;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  padding: 5px 5px 10px;
+  outline: none;
+  font-weight: bold;
+}
+.container .search-bar button {
+  background-color: #ff1e42;
+  border: none;
+  font-size: 1em;
+  padding: 17px;
+  border-radius: 5px;
+  color: #ffffff;
+  margin-left: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container .card .card__item {
+  background-color: #ffffff;
+  color: #0a1f44;
+  max-width: 210px;
+  padding: 20px 30px;
+  border-radius: 20px;
+}
+.container .card .card__item .sectionOne {
+  display: flex;
+  align-items: center;
+}
+.container .card .card__item .sectionOne .card__item--country {
+  background-color: #ff8c00;
+  border-radius: 10px;
+  font-size: 0.7em;
+  padding: 0.4em;
+  margin-left: 8px;
+  color: #ffffff;
+}
+.container .card .card__item .sectionTwo {
+  display: flex;
+}
+.container .card .card__item .sectionTwo .card__item--number {
+  font-size: 5em;
+  font-weight: bold;
+  margin: 0;
+}
+.container .card .card__item .sectionTwo .card__item--unit {
+  font-size: 2.2em;
+  margin: 0;
+  padding-top: 12px;
+}
+.container .card .card__item .sectionOne {
+  display: flex;
+}
+.container footer {
+  margin-top: 50px;
+}
+.container footer a {
+  text-decoration: none;
+  color: #ffffff;
+}

@@ -1,11 +1,11 @@
-const cityTyped = prompt("Search city");
-// const justForDevelopmentCity= 'Andorra'
+// const cityTyped = prompt("Search city");
+const justForDevelopmentCity= 'Andorra'
 const city = "medellin";
 const API_KEY = "c982d29f34b457c7256dfdf78eff3288";
 const temperatureUnit = "metric";
 
 fetch(`https://api.openweathermap.org/data/2.5/
-weather?q=${cityTyped}
+weather?q=${justForDevelopmentCity}
 &appid=${API_KEY}
 &units=${temperatureUnit}`)
   .then(function(response) {
