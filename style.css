@@ -82,3 +82,37 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
+
+@media only screen and (max-width: 480px) {
+  .container,
+body {
+    margin: 8px;
+    padding: 0;
+  }
+  .container .title,
+body .title {
+    text-align: center;
+  }
+  .container .search-bar input,
+body .search-bar input {
+    width: 100%;
+    padding: 0;
+  }
+  .container .search-bar button,
+body .search-bar button {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .container .card,
+body .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .card .card__item,
+body .card .card__item {
+    min-width: 70%;
+  }
+}
