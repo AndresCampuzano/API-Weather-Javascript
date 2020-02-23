@@ -3,7 +3,8 @@
 const API_KEY = "c982d29f34b457c7256dfdf78eff3288";
 const temperatureUnit = "metric";
 
-//Getting user input value to use in Search Bar
+
+// Getting user input value to use in Search Bar
 function makeItWorks(){
   var inputVal = document.getElementById("userInput").value;
   // Selecting the input element and get its value 
@@ -26,7 +27,7 @@ weather?q=${inputVal}
       node.innerHTML = template;
     };
     var template = `
-    <div class="card__item">
+    <div class="card__item" id="card__item">
     <div class="sectionOne">
         <h2 class="card__item--title">${data.name}</h2>
         <p class="card__item--country"> ${data.sys.country}</p>
